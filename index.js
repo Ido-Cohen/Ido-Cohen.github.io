@@ -13,7 +13,7 @@ $(document).ready(function () {
         $("#geeks_joke").text(res);
     };
     $.ajax({method: "GET",
-        url: "https://v2.jokeapi.dev/joke/Programming?type=single",
+        url: "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=racist&type=single",
         dataType: "json", complete: showGeek});
 
     if(localStorage.getItem("dark") === "false"){
@@ -30,4 +30,14 @@ $(document).ready(function () {
            localStorage.setItem("dark", "false");
        }
    });
+    $("#chuck img").click(function () {
+        $.ajax({method: "GET",
+            url: "https://api.chucknorris.io/jokes/random",
+            dataType: "json", complete: showChuck});
+    });
+    $("#geeks img").click(function () {
+        $.ajax({method: "GET",
+            url: "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=racist&type=single",
+            dataType: "json", complete: showGeek});
+    });
 });

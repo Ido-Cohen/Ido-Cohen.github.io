@@ -91,20 +91,26 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 #linkedin{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
+}
+
+#resume{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
 }
 
 #links img{
     margin: 20px;
     width: 20vw;
-
 }
 
 #change_mode{
@@ -123,17 +129,25 @@ body{
 }
 
 #chuck{
+    margin: 1%;
+    padding-top: 20px;
+    background: rgba(101, 101, 101, 0.5);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 45vw;
 }
 
 #geeks{
+    margin: 1%;
+    padding-top: 20px;
+    background: rgba(101, 101, 101, 0.5);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50vw;
+    width: 45vw;
 }
 
 #geeks_joke{
@@ -144,4 +158,8 @@ body{
 #chuck_joke{
     padding-left: 20%;
     padding-right: 20%;
+}
+
+#jokes img:hover{
+    cursor: pointer;
 }
