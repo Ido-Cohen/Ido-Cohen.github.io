@@ -66,9 +66,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #ffffff;
+    background: #22272e;
     transition: 0.4s;
-    color: black;
+    color: white;
     font-family: OpenSans, sans-serif;
     font-weight: bold;
     /*justify-content: center;*/

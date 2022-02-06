@@ -15,9 +15,11 @@ $(document).ready(function () {
     $.ajax({method: "GET",
         url: "https://v2.jokeapi.dev/joke/Programming?type=single",
         dataType: "json", complete: showGeek});
-    if(localStorage.getItem("dark") === "true"){
-        $("body").css({"background":"#22272e", "color":"white"});
-        $("#switch").prop("checked", "true");
+
+    if(localStorage.getItem("dark") === "false"){
+        $("body").css({"background":"#ffffff", "color":"black"});
+        // $("#switch").prop("checked", "false");
+        $("#switch").removeAttr("checked");
     }
    $("#switch").click(function () {
        if($(this).prop("checked")){
