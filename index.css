@@ -40,7 +40,7 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    background-color: #38434f;
+    background-color: #22272e;
 }
 
 input:focus + .slider {
@@ -81,4 +81,67 @@ body{
 @font-face {
     font-family: "OpenSans";
     src: url("/fonts/OpenSans-Bold.ttf") format("ttf");
+}
+
+#links{
+    display: flex;
+    flex-direction: row;
+}
+#github{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#linkedin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#links img{
+    margin: 20px;
+    width: 20vw;
+
+}
+
+#change_mode{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*float: bottom;*/
+}
+#change_mode label{
+    margin: 5px;
+}
+
+#jokes{
+    display: flex;
+    flex-direction: row;
+}
+
+#chuck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+#geeks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+#geeks_joke{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#chuck_joke{
+    padding-left: 20%;
+    padding-right: 20%;
 }

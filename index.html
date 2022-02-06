@@ -10,14 +10,38 @@
 </head>
 <body>
 <!--<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="ido-c" data-version="v1"></div>-->
-Dark Mode
-<label class="dark_mode_switch">
-    <input id="switch" type="checkbox">
-    <span class="slider round"></span>
-    <br>
-    <br>
-    <img src="images/ChuckNorris.gif">
-    <img src="images/nerd-face-joypixels.gif">
-</label>
+<div id="links">
+    <div id="github">
+        My GitHub <br>
+        <a href="https://github.com/Ido-Cohen/">
+            <img src="images/GitHub.png"></a>
+    </div>
+    <div id="linkedin">
+        My LinkedIn <br>
+        <a href="https://www.linkedin.com/in/ido-c/">
+            <img src="images/LinkedIn_logo_initials.png"></a>
+    </div>
+</div>
+<br>
+<br>
+<div id="jokes">
+    <div id="chuck">
+        <img src="images/ChuckNorris.gif" width="50"><br>
+        Chuck Norris jokes:<br>
+        <p><div id="chuck_joke"></div></p>
+    </div>
+    <div id="geeks">
+        <img src="images/nerd-face-joypixels.gif" width="44"><br>
+        Geeks jokes:<br>
+        <p><div id="geeks_joke"></div></p>
+    </div>
+</div>
+<div id="change_mode">
+    <label class="dark_mode_switch">
+        <input id="switch" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    <label>Dark Mode</label>
+</div>
 </body>
 </html>
