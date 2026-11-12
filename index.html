@@ -1,53 +1,340 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Ido Cohen</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="index.js" type="text/javascript"></script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <link href="index.css" rel="stylesheet">
-</head>
-<body>
-<!--<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="ido-c" data-version="v1"></div>-->
-<h1>Ido Cohen</h1>
-<div id="links">
-    <div id="github">
-        My GitHub <br>
-        <a href="https://github.com/Ido-Cohen/">
-            <img src="images/GitHub.png"></a>
-    </div>
-    <div id="linkedin">
-        My LinkedIn <br>
-        <a href="https://www.linkedin.com/in/ido-c/">
-            <img src="images/LinkedIn_logo_initials.png"></a>
-    </div>
-    <div id="resume">
-        My Resume <br>
-        <a href="documents/Resume%20-%20Ido%20Cohen.pdf">
-            <img src="images/resume.png"></a>
-    </div>
-</div>
-<br>
-<br>
-<div id="jokes">
-    <div id="chuck">
-        <img src="images/ChuckNorris.gif" width="50"><br>
-        Chuck Norris jokes:<br>
-        <p><div id="chuck_joke"></div></p>
-    </div>
-    <div id="geeks">
-        <img src="images/nerd-face-joypixels.gif" width="44"><br>
-        Geeks jokes:<br>
-        <p><div id="geeks_joke"></div></p>
-    </div>
-</div>
-<div id="change_mode">
-    <label class="dark_mode_switch">
-        <input id="switch" type="checkbox" checked>
-        <span class="slider round"></span>
-    </label>
-    <label>Dark Mode</label>
-</div>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ido Cohen, software engineer in Israel. Java and Spring Boot backend services, AWS, and Intel platform-security firmware experience."
+    />
+    <meta name="theme-color" content="#f5f3ec" />
+    <meta property="og:title" content="Ido Cohen — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Backend services. Cloud workflows. A foundation in platform security."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ido-cohen.github.io/" />
+    <link rel="canonical" href="https://ido-cohen.github.io/" />
+    
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Ido Cohen — Software Engineer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="#top" aria-label="Ido Cohen, back to top"
+        >ido cohen<span aria-hidden="true">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#work">Projects</a><a href="#experience">Experience</a
+        ><a href="#contact">Contact ↗</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero wrap" id="top" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> SOFTWARE
+            ENGINEER · ISRAEL
+          </p>
+          <h1 id="intro-title">
+            From the firmware<br />to the <span class="serif">cloud.</span>
+          </h1>
+          <p class="intro">
+            I’m Ido. I build Java backend services and distributed processing
+            workflows, with a foundation in C/C++ platform-security firmware.
+          </p>
+          <p class="hero-detail">
+            Approximately five years of professional software development across
+            Ex Libris / Clarivate and Intel. Interested in backend and
+            full-stack roles.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#work">Explore my work ↓</a
+            ><a class="text-link" href="mailto:ido902@gmail.com?subject=Software%20engineering%20opportunity%20%E2%80%94%20resume%20request"
+              >Request my résumé ↗</a
+            >
+          </div>
+        </div>
+        <aside class="focus-panel" aria-label="Engineering focus">
+          <div class="panel-top">
+            <span>ENGINEERING FOCUS</span><span aria-hidden="true">[ IC ]</span>
+          </div>
+          <div class="focus-row">
+            <span class="focus-number">01</span>
+            <div>
+              <h2>Backend &amp; data</h2>
+              <p>Java · Spring Boot · SQL · Solr</p>
+            </div>
+          </div>
+          <div class="focus-row">
+            <span class="focus-number">02</span>
+            <div>
+              <h2>Cloud &amp; delivery</h2>
+              <p>AWS · Docker · CI/CD</p>
+            </div>
+          </div>
+          <div class="focus-row">
+            <span class="focus-number">03</span>
+            <div>
+              <h2>Systems &amp; security</h2>
+              <p>C / C++ · CSME firmware</p>
+            </div>
+          </div>
+          <p class="panel-note">An engineer’s view of the whole system.</p>
+        </aside>
+      </section>
+      <section class="work-section" id="work" aria-labelledby="work-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">01 / SELECTED WORK</p>
+              <h2 id="work-title">
+                Ideas you can <span class="serif">inspect.</span>
+              </h2>
+            </div>
+            <p>
+              Public source, concrete examples,<br />and an honest view of
+              what’s implemented.
+            </p>
+          </div>
+          <article class="featured-project">
+            <div class="project-story">
+              <p class="project-type">
+                TEAM CAPSTONE · ACCESSIBILITY PROTOTYPE
+              </p>
+              <h3>TheUnseenView</h3>
+              <p class="project-lead">
+                Turning a picture into something you can feel.
+              </p>
+              <p>
+                A two-student project that combines image segmentation,
+                selectable tactile patterns and STL generation. The interface
+                guides users from an image to a relief model intended for 3D
+                printing.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python / Flask</li>
+                <li>React</li>
+                <li>Detectron2</li>
+                <li>NumPy / STL</li>
+              </ul>
+              <p class="project-caveat">
+                Research prototype. The public checkout needs environment
+                restoration and a missing segmentation module; tactile usability
+                and print quality require validation.
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/Ido-Cohen/TheUnseenView"
+                >Explore the source ↗</a
+              >
+            </div>
+            <div class="project-demo">
+              <div class="demo-heading">
+                <span>IMAGE → TACTILE PATTERN</span
+                ><span class="demo-label">Repository examples</span>
+              </div>
+              <figure>
+                <img
+                  id="project-image"
+                  src="https://raw.githubusercontent.com/Ido-Cohen/TheUnseenView/ce628980ea8888a3225bb7318cf0d2e1971c38f0/src/Components/App/media/pattern.png"
+                  width="1920"
+                  height="1080"
+                  alt="Example image transformed into distinct geometric patterns for the detected objects."
+                  loading="lazy"
+                />
+                <figcaption id="project-caption">
+                  Pattern assignment: each detected region receives a distinct
+                  texture.
+                </figcaption>
+              </figure>
+              <div class="image-controls" aria-label="Choose a project example">
+                <button
+                  type="button"
+                  data-example="original"
+                  aria-pressed="false"
+                >
+                  Original</button
+                ><button
+                  type="button"
+                  data-example="segmented"
+                  aria-pressed="false"
+                >
+                  Segmentation</button
+                ><button
+                  type="button"
+                  data-example="pattern"
+                  aria-pressed="true"
+                >
+                  Patterns
+                </button>
+              </div>
+              <noscript
+                ><p>
+                  Additional examples are available in the project repository.
+                </p></noscript
+              >
+            </div>
+          </article>
+          <div class="project-list">
+            <article class="project-row">
+              <span class="project-index" aria-hidden="true">02</span>
+              <div>
+                <p class="project-type">FULL-STACK LEARNING PROJECT</p>
+                <h3>Reactivities</h3>
+                <p>
+                  Activity CRUD with a .NET 10 API, EF Core and SQLite, plus a
+                  React / TypeScript interface. MediatR separates commands and
+                  queries; React Query manages server state.
+                </p>
+                <p class="small-note">
+                  A learning implementation of the Reactivities course pattern.
+                  Authentication, chat and attendance are not complete features
+                  in this checkout.
+                </p>
+              </div>
+              <div class="project-links">
+                <span>C# · React · SQLite</span
+                ><a
+                  class="text-link"
+                  href="https://github.com/Ido-Cohen/Reactivities"
+                  >View source ↗</a
+                >
+              </div>
+            </article>
+            <article class="project-row">
+              <span class="project-index" aria-hidden="true">03</span>
+              <div>
+                <p class="project-type">SYSTEMS PROGRAMMING EXERCISE</p>
+                <h3>Proxy_Server</h3>
+                <p>
+                  An HTTP GET proxy in C with a pthread worker pool, hostname
+                  and IPv4 subnet filtering, and a filesystem response cache.
+                </p>
+                <p class="small-note">
+                  An educational implementation for isolated local experiments.
+                  It is not hardened for public traffic and does not support
+                  HTTPS tunneling.
+                </p>
+              </div>
+              <div class="project-links">
+                <span>C · POSIX sockets · pthreads</span
+                ><a
+                  class="text-link"
+                  href="https://github.com/Ido-Cohen/Proxy_Server"
+                  >View source ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="experience-section wrap"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">02 / EXPERIENCE</p>
+            <h2 id="experience-title">
+              Built on <span class="serif">real work.</span>
+            </h2>
+          </div>
+          <a class="text-link" href="mailto:ido902@gmail.com?subject=Software%20engineering%20opportunity%20%E2%80%94%20resume%20request"
+            >Request résumé ↗</a
+          >
+        </div>
+        <div class="timeline">
+          <article>
+            <div class="timeline-meta">
+              <span>MAR 2024 — PRESENT</span>
+              <p>Ex Libris / Clarivate</p>
+            </div>
+            <div>
+              <h3>Software Developer</h3>
+              <p>
+                Backend development for Rosetta-VE digital preservation: Java
+                and Spring Boot services, distributed processing, SQL and Solr
+                indexing.
+              </p>
+              <ul>
+                <li>
+                  Technical design and implementation for the Preservation
+                  domain.
+                </li>
+                <li>
+                  Migration from AWS SQS to an internal distributed queue.
+                </li>
+                <li>
+                  SQL optimization, autoscaling and delivery workflows using
+                  Docker, AWS ECS / ECR, GitHub Actions and Jenkins.
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article>
+            <div class="timeline-meta">
+              <span>MAR 2022 — MAR 2024</span>
+              <p>Intel</p>
+            </div>
+            <div>
+              <h3>Software Engineer · CSME</h3>
+              <p>
+                C/C++ firmware development for Intel’s Converged Security and
+                Management Engine, focused on platform security and boot
+                firmware.
+              </p>
+              <ul>
+                <li>Root-of-Trust mechanisms and firmware protections.</li>
+                <li>
+                  Customer-specific security adaptations with architecture,
+                  validation and hardware teams.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="education">
+          <span class="eyebrow">EDUCATION</span>
+          <div>
+            <h3>B.Sc. in Software Engineering</h3>
+            <p>
+              Azrieli College of Engineering, Jerusalem · 2019–2023 · Graduated
+              with distinction
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="wrap contact-inner">
+          <div>
+            <p class="eyebrow">03 / LET’S CONNECT</p>
+            <h2 id="contact-title">
+              Good systems start<br />with a
+              <span class="serif">conversation.</span>
+            </h2>
+            <p>For backend and full-stack opportunities, get in touch.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:ido902@gmail.com">Email me ↗</a
+            ><a href="https://www.linkedin.com/in/ido-c/">LinkedIn ↗</a
+            ><a href="https://github.com/Ido-Cohen">GitHub ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap site-footer">
+      <span>Ido Cohen · Software Engineer</span
+      ><span>Built with HTML, CSS &amp; a little JavaScript.</span
+      ><a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
 </html>
