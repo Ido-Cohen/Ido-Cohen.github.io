@@ -1,43 +1,36 @@
-$(document).ready(function () {
-
-    let showChuck = function (data) {
-        let res = (JSON.parse(data.responseText).value);
-        $("#chuck_joke").text(res);
-    };
-    $.ajax({method: "GET",
-        url: "https://api.chucknorris.io/jokes/random",
-        dataType: "json", complete: showChuck});
-
-    let showGeek = function (data) {
-        let res = (JSON.parse(data.responseText).joke);
-        $("#geeks_joke").text(res);
-    };
-    $.ajax({method: "GET",
-        url: "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=racist&type=single",
-        dataType: "json", complete: showGeek});
-
-    if(localStorage.getItem("dark") === "false"){
-        $("body").css({"background":"#ffffff", "color":"black"});
-        // $("#switch").prop("checked", "false");
-        $("#switch").removeAttr("checked");
-    }
-   $("#switch").click(function () {
-       if($(this).prop("checked")){
-           $("body").css({"background":"#22272e", "color":"white"});
-           localStorage.setItem("dark", "true");
-       }else{
-           $("body").css({"background":"#ffffff", "color":"black"});
-           localStorage.setItem("dark", "false");
-       }
-   });
-    $("#chuck img").click(function () {
-        $.ajax({method: "GET",
-            url: "https://api.chucknorris.io/jokes/random",
-            dataType: "json", complete: showChuck});
-    });
-    $("#geeks img").click(function () {
-        $.ajax({method: "GET",
-            url: "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=racist&type=single",
-            dataType: "json", complete: showGeek});
-    });
-});
+"use strict";
+const examples = {
+  original: {
+    src: "https://raw.githubusercontent.com/Ido-Cohen/TheUnseenView/ce628980ea8888a3225bb7318cf0d2e1971c38f0/src/Components/App/media/cropped.jpg",
+    alt: "Original project example before segmentation.",
+    caption:
+      "Input: the original cropped image from the project’s example files.",
+  },
+  segmented: {
+    src: "https://raw.githubusercontent.com/Ido-Cohen/TheUnseenView/ce628980ea8888a3225bb7318cf0d2e1971c38f0/src/Components/App/media/segmented.png",
+    alt: "The example image separated into colored object regions by the segmentation pipeline.",
+    caption:
+      "Segmentation: the image is separated into regions for pattern selection.",
+  },
+  pattern: {
+    src: "https://raw.githubusercontent.com/Ido-Cohen/TheUnseenView/ce628980ea8888a3225bb7318cf0d2e1971c38f0/src/Components/App/media/pattern.png",
+    alt: "Example image transformed into distinct geometric patterns for the detected objects.",
+    caption:
+      "Pattern assignment: each detected region receives a distinct texture.",
+  },
+};
+const image = document.querySelector("#project-image");
+const caption = document.querySelector("#project-caption");
+const controls = document.querySelectorAll("[data-example]");
+controls.forEach((button) =>
+  button.addEventListener("click", () => {
+    const example = examples[button.dataset.example];
+    if (!example || !image || !caption) return;
+    image.src = example.src;
+    image.alt = example.alt;
+    caption.textContent = example.caption;
+    controls.forEach((control) =>
+      control.setAttribute("aria-pressed", String(control === button)),
+    );
+  }),
+);
